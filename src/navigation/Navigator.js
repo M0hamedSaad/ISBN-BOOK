@@ -13,8 +13,8 @@ export default Navigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }} />
         <Stack.Screen name="DetailsOfBook" component={DetailsOfBook} options={{ headerShown: false }} />
 
       </Stack.Navigator>

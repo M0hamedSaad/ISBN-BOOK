@@ -8,6 +8,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.WHITE
   },
+  header: {
+    marginTop: 10,
+    fontWeight: 'bold',
+    color: Colors.PRIMARY,
+   // paddingHorizontal: 15,
+    fontSize: 20,
+    textAlign:'center'
+  }
 
 });
 
