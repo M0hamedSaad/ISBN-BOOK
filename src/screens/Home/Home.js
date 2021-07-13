@@ -1,46 +1,38 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   Text,
   ScrollView,
-  FlatList,
   View,
+  KeyboardAvoidingView
 } from 'react-native';
 import Spinner from '../../components/Spinner';
 import styles from './style';
 import { Avatar } from 'react-native-elements';
 import { Icon } from 'native-base';
-import { KeyboardAvoidingView } from 'react-native';
+import Swiper from '../../components/swiper';
+import AnimatedInput from '../../components/AnimatedInput';
+import Carousel from '../../components/Carousel';
+
 
 //route
 //route.params.username
 const Home = () => {
-  const books = []
+
+
   useEffect(() => {
 
   }, []);
 
-  const RowItem = ({ item }) => {
-    return (
-      <RowItem />
-    );
-  };
+  //const _keyExtractor = (item, index) => index + '';
 
-  const _keyExtractor = (item, index) => index + '';
 
   return (
-    <KeyboardAvoidingView style={styles.container} behavior='padding'>
+    <KeyboardAvoidingView style={styles.container} behavior='height'>
       <ScrollView nestedScrollEnabled showsVerticalScrollIndicator={false}>
-
-        <Icon name='plussquareo' type='AntDesign' style={styles.addIcon} />
-
-        <FlatList
-          nestedScrollEnabled
-          data={books}
-          extraData={books}
-          renderItem={RowItem}
-          keyExtractor={_keyExtractor}
-        />
-
+        <Swiper />
+        <AnimatedInput />
+        <Text style={styles.header}>Best Books</Text>
+        <Carousel />
       </ScrollView>
     </KeyboardAvoidingView>
   );

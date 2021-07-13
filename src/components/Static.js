@@ -1,0 +1,10 @@
+export const ENTRIES = [
+    {"title": "War and Peace", "author": "Tolstoy, Leo", "year_written": 1865, "edition": "Penguin", "price":  12.7,"uri":"https://ichef.bbci.co.uk/news/976/cpsprodpb/A0FC/production/_108521214_gettyimages-1065887212.jpg"},
+    {"title": "Anna Karenina", "author": "Tolstoy, Leo", "year_written": 1875, "edition": "Penguin", "price":  13.5,"uri":"https://kbimages1-a.akamaihd.net/795f96dc-e5cc-428f-92e8-64cc0e11c908/353/569/90/False/anna-karenina-146.jpg"},
+    {"title": "Mrs. Dalloway", "author": "Woolf, Virginia", "year_written": 1925, "edition": "Harcourt Brace", "price":  25,"uri":"https://i.pinimg.com/564x/07/45/54/074554cccc08f1ac69bb1a214d085169.jpg"},
+    {"title": "The Hours", "author": "Cunnningham, Michael", "year_written": 1999, "edition": "Harcourt Brace", "price":  12.35,"uri":"https://res.cloudinary.com/jerrick/image/upload/f_jpg,fl_progressive,q_auto,w_1024/5ee4bcb283cb3e001d40a7c3.png"},
+    {"title": "Huckleberry Finn", "author": "Twain, Mark", "year_written": 1865, "edition": "Penguin", "price":  5.76,"uri":"https://d28hgpri8am2if.cloudfront.net/book_images/onix/cvr9781481403757/the-adventures-of-huckleberry-finn-9781481403757_lg.jpg"},
+    {"title": "Bleak House", "author": "Dickens, Charles", "year_written": 1870, "edition": "Random House", "price":  5.75,"uri":"https://bookaudio.online/uploads/images/media/118/QILHX0rvNThRh9qw-charles-dickens-bleak-house.jpg"},
+    {"title": "Tom Sawyer", "author": "Twain, Mark", "year_written": 1862, "edition": "Random House", "price":  7.75,"uri":"https://kiddingly.in/wp-content/uploads/2019/04/130.jpg"},
+    {"title": "Lord of the Rings", "author": "Tolkien, J.R.", "year_written": 1937, "edition": "Penguin", "price":  27.45,"uri":"https://images-na.ssl-images-amazon.com/images/I/51EstVXM1UL._SX331_BO1,204,203,200_.jpg"},
+];
