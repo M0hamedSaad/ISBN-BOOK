@@ -4,16 +4,23 @@ import CarouselSnap from 'react-native-snap-carousel';
 import { ENTRIES } from '../components/Static';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-const Carousel = () => {
+const Carousel = ({ books, navigation }) => {
 
+  const navigateToDetails = (item) => { books ? navigation.navigate('DetailsOfBook', { item: item }) : null }
   const _renderItem = ({ item }) => {
     return (
-      <TouchableOpacity style={styles.slide} activeOpacity={0}>
-        <Image source={{ uri: item.uri }}
-          style={styles.img}
-          resizeMode='cover' />
-        <Text style={styles.title} numberOfLines={1} >{item.title}</Text>
-        <Text style={styles.subtitle} numberOfLines={2} >{item.author + ' in ' + item.year_written}</Text>
+      <TouchableOpacity style={styles.slide} activeOpacity={0} onPress={() => navigateToDetails(item)}>
+        <Image source={{
+          uri: books ? item?.covers ?
+            `https://covers.openlibrary.org/b/id/${item?.covers[0]}-L.jpg` : null : item.uri
+        }}
+          style={styles.img} resizeMode='cover' />
+
+        <Text style={styles.title} numberOfLines={1} >
+          {item.title}</Text>
+
+        <Text style={styles.subtitle} numberOfLines={2} >
+          {books ? 'Publish in ' + item.publish_date : item.author + ' in ' + item.year_written}</Text>
 
       </TouchableOpacity>
     );
@@ -22,7 +29,7 @@ const Carousel = () => {
     <View style={{ marginTop: 20 }}>
       <CarouselSnap
         //  layout={'stack'}
-        data={ENTRIES}
+        data={books ? books : ENTRIES}
         firstItem={parseInt(ENTRIES.length / 2)}
         renderItem={_renderItem}
         sliderWidth={wp('100')}
@@ -30,6 +37,7 @@ const Carousel = () => {
         inactiveSlideScale={0.80}
         inactiveSlideOpacity={1}
         scrollEventThrottle={16}
+        activeOpacity={0}
       />
     </View>
   );

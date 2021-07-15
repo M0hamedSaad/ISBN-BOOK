@@ -12,7 +12,6 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontWeight: 'bold',
     color: Colors.PRIMARY,
-   // paddingHorizontal: 15,
     fontSize: 20,
     textAlign:'center'
   }
