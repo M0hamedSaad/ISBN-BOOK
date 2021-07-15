@@ -6,7 +6,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    marginBottom: 20
 
   },
   cardView: {
@@ -55,6 +54,7 @@ const styles = StyleSheet.create({
     maxHeight: hp('25'),
     paddingHorizontal: 20,
     width: '100%', marginTop: 5
+    ,marginBottom:10
   }
 });
 
